@@ -20,8 +20,8 @@ tieba_cookie_str = 'BAIDUID=0B492F710013D8A05CB5AAA1B55AE168:FG=1; TIEBA_USERTYP
 zod_cookie_str = 'TvTn_2132_saltkey=a2RjrjAy; TvTn_2132_lastvisit=1491055712; TvTn_2132_seccode=11144.d87699b675ca9ae422; TvTn_2132_ulastactivity=45dcEPl9bglefpcG0hTUxjIiLr67ygay%2FCbmmPU%2FOn04NML8BWoi; TvTn_2132_auth=2f1a%2BKdOj7T%2Fi06JS%2FlhvjI5yv4yOhkczI8OakiAC%2FMXHUpOYQ69t6F0rWR7SxWPl4cVksOQYKKbPzLbWpMejyh59Zk; TvTn_2132_lastcheckfeed=228826%7C1491059361; TvTn_2132_myrepeat_rr=R0; TvTn_2132_nofavfid=1; TvTn_2132_lip=45.77.23.58%2C1491062989; TvTn_2132_onlineusernum=570; TvTn_2132_sid=iWw4lz; TvTn_2132_sendmail=1; TvTn_2132_lastact=1491064148%09home.php%09spacecp'
 if __name__ == '__main__':
 
-    print(tieba_cookie_str)
-    print(get_cookies(tieba_cookie_str))
+    # print(tieba_cookie_str)
+    # print(get_cookies(tieba_cookie_str))
 
     hkpic = HkpicAutosigh(my_username, my_password)
     soulplus = SoulPlus(my_username, my_password)
@@ -42,5 +42,6 @@ if __name__ == '__main__':
             tieba.run()
 
         count += 1
+        print(count)
         # logger.info(str(count))
         sleep(1)
