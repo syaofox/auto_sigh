@@ -1,0 +1,8 @@
+04-02 00:01 youiv        INFO     开始 tieba.com
+04-02 00:01 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): tieba.baidu.com
+04-02 00:01 requests.packages.urllib3.connectionpool DEBUG    https://tieba.baidu.com:443 "GET / HTTP/1.1" 200 None
+04-02 00:01 youiv        INFO     登陆状态:83916ea014ba4f151491062517
+04-02 00:01 youiv        INFO     登陆状态:83916ea014ba4f151491062517,开始签到
+04-02 00:01 requests.packages.urllib3.connectionpool DEBUG    https://tieba.baidu.com:443 "POST /tbmall/onekeySignin1 HTTP/1.1" 200 44
+04-02 00:01 youiv        INFO     已签到
+04-02 00:01 youiv        INFO     --------------------
