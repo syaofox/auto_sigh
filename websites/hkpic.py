@@ -32,7 +32,7 @@ class HkpicAutosigh:
 
             if input:
                 # self.logger.info('未登陆{}'.format(self.website))
-                self.hash = self.get_hash(rs.text)
+                # self.hash = self.get_hash()
                 return True
 
             else:
@@ -71,6 +71,8 @@ class HkpicAutosigh:
                     self.logger.info('累计签到:{}天'.format(days.group(1)))
             else:
                 self.logger.info('未签到，开始签到')
+                if self.hash == '':
+                    self.hash = self.get_hash()
                 if self.hash != '':
                     url = urljoin(self.website, '/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=1&inajax=1')
                     data = ({
@@ -152,11 +154,11 @@ class HkpicAutosigh:
 
 
 
-    def get_hash(self, html):
+    def get_hash(self):
         rs = self.session.get(self.website, timeout=5)
         sleep(1)
         if rs.status_code == 200:
-            has = re.search(r'formhash=(.*?)">退出</a>', html)
+            has = re.search(r'formhash=(.*?)">退出</a>', rs.text)
             if has:
                 return has.group(1)
             else:
