@@ -153,11 +153,14 @@ class HkpicAutosigh:
 
 
     def get_hash(self, html):
-        has = re.search(r'formhash=(.*?)">退出</a>', html)
-        if has:
-            return has.group(1)
-        else:
-            return ''
+        rs = self.session.get(self.website, timeout=5)
+        sleep(1)
+        if rs.status_code == 200:
+            has = re.search(r'formhash=(.*?)">退出</a>', html)
+            if has:
+                return has.group(1)
+            else:
+                return ''
 
 
 if __name__ == '__main__':
