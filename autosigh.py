@@ -42,6 +42,6 @@ if __name__ == '__main__':
             tieba.run()
 
         count += 1
-        print(count)
+        print('\r下次签到还需{}秒... '.format(1800-count), end='')
         # logger.info(str(count))
         sleep(1)
