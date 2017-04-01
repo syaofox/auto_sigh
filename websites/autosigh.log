@@ -1,9 +1,12 @@
-04-02 00:30 youiv        INFO     开始 zodgame.us
-04-02 00:30 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTPS connection (1): www.zodgame.us
-04-02 00:30 requests.packages.urllib3.connectionpool DEBUG    https://www.zodgame.us:443 "GET / HTTP/1.1" 301 132
-04-02 00:30 requests.packages.urllib3.connectionpool DEBUG    https://www.zodgame.us:443 "GET /forum.php HTTP/1.1" 200 8822
-04-02 00:30 youiv        INFO     登陆状态:True
-04-02 00:30 youiv        INFO     登陆状态:True,开始签到
-04-02 00:30 requests.packages.urllib3.connectionpool DEBUG    https://www.zodgame.us:443 "GET /plugin.php?id=dsu_paulsign:sign HTTP/1.1" 200 6491
-04-02 00:30 youiv        INFO     您今天已经签到过了或者签到时间还未开始 您累计已签到:407 您上次签到时间:2017-04-02 00:13
-04-02 00:30 youiv        INFO     --------------------
+04-02 00:52 soul-plus    INFO     开始bbs.soul-plus.net
+04-02 00:52 requests.packages.urllib3.connectionpool DEBUG    Starting new HTTP connection (1): 127.0.0.1
+04-02 00:52 requests.packages.urllib3.connectionpool DEBUG    http://127.0.0.1:6152 "GET http://bbs.soul-plus.net/index.php HTTP/1.1" 200 None
+04-02 00:52 soul-plus    INFO     登陆状态:False
+04-02 00:52 soul-plus    INFO     开始登陆
+04-02 00:52 requests.packages.urllib3.connectionpool DEBUG    http://127.0.0.1:6152 "POST http://bbs.soul-plus.net/login.php HTTP/1.1" 200 None
+04-02 00:52 soul-plus    INFO     登陆状态:True,开始签到
+04-02 00:52 requests.packages.urllib3.connectionpool DEBUG    http://127.0.0.1:6152 "GET http://bbs.soul-plus.net/plugin.php?H_name-tasks.html HTTP/1.1" 200 None
+04-02 00:52 soul-plus    INFO     周任务还需158小时
+04-02 00:52 soul-plus    INFO     日常任务还需18小时
+04-02 00:52 requests.packages.urllib3.connectionpool DEBUG    http://127.0.0.1:6152 "GET http://bbs.soul-plus.net/plugin.php?H_name-tasks-actions-newtasks.html.html HTTP/1.1" 200 None
+04-02 00:52 soul-plus    INFO     --------------------

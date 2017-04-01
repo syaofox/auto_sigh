@@ -28,16 +28,16 @@ class HkpicAutosigh:
         sleep(1)
         if rs.status_code == 200:
 
-            input = re.search(r'<input.*?id="ls_username".*?>', rs.text, re.S)
+            input = re.search(r'SyaoFox', rs.text, re.S)
 
             if input:
                 # self.logger.info('未登陆{}'.format(self.website))
-                return False
-            else:
-                # self.logger.info('已登陆{}'.format(self.website))
                 self.hash = self.get_hash(rs.text)
-                # self.logger.info('当前hash值:{}'.format(self.hash))
                 return True
+
+            else:
+
+                return False
 
     def logon(self):
 
@@ -163,11 +163,11 @@ class HkpicAutosigh:
 if __name__ == '__main__':
     hkpic = HkpicAutosigh('syaofox', 'Xsbyczz060610')
     hkpic.run()
-    sleep(5)
-    while True:
-        hkpic.post_reply('http://hkbbcc.net/thread-4414984-1-1.html')
-        times = random.randint(60,120)
-        sleep(times)
+    # sleep(5)
+    # while True:
+    #     hkpic.post_reply('http://hkbbcc.net/thread-4414984-1-1.html')
+    #     times = random.randint(60,120)
+    #     sleep(times)
 
     # spider = Jokespider()
     #
